@@ -5,14 +5,28 @@ using namespace std;
 
 // } Driver Code Ends
 // User function Template for C++
+
+// Not the optimized solution
+// class Solution {
+//   public:
+//     string revStr(string S) {
+//         string s="";
+//         for(int i=S.size();i>=0;i--){
+//             s+=S[i];
+//         }
+//         return s;
+//     }
+// };
+
+// Optimized solution
 class Solution {
   public:
     string revStr(string S) {
         string s="";
-        for(int i=S.size();i>=0;i--){
-            s+=S[i];
+        for(int i=0;i<S.size()/2;i++){
+            swap(S[i],S[S.size()-1-i]);
         }
-        return s;
+        return S;
     }
 };
 
