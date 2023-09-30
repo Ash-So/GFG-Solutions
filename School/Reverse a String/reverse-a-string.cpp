@@ -21,7 +21,6 @@ using namespace std;
 class Solution {
   public:
     string revStr(string S) {
-        string s="";
         for(int i=0;i<S.size()/2;i++){
             swap(S[i],S[S.size()-1-i]);
         }
