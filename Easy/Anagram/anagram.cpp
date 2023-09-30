@@ -4,6 +4,7 @@ using namespace std;
 
 
 // } Driver Code Ends
+// Map Approach
 class Solution
 {
     public:
@@ -27,22 +28,31 @@ class Solution
             }
         }
         return true;
-        
-        // vector<int> c1(26);
-        // for(int j=0;j<a.size();j++){
-        //     c1[a[j]-'a']++;
-        // }
-        // for(int j=0;j<b.size();j++){
-        //     c1[b[j]-'a']--;
-        // }
-        // if(!c1.empty()) return true;
-        // return false;
-        
-        
-        
     }
 
 };
+
+// Another approach - Frequency array
+// class Solution
+// {
+//     public:
+//     //Function is to check whether two strings are anagram of each other or not.
+//     bool isAnagram(string a, string b){
+//         if(a.length() != b.length()) return false;
+//         int freq[26]={0};
+//         for(int j=0;j<a.size();j++){
+//             freq[str[j]-'a']++;
+//         }
+//         for(int j=0;j<b.size();j++){
+//             freq[str[j]-'a']++;
+//         }
+//         for(int i=;i<26;i++){
+//             if(freq[i]!=0) return false;
+//         }
+//         return true;
+//     }
+
+// };
 
 //{ Driver Code Starts.
 
