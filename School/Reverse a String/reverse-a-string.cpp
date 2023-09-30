@@ -10,7 +10,6 @@ using namespace std;
 // class Solution {
 //   public:
 //     string revStr(string S) {
-//         string s="";
 //         for(int i=S.size();i>=0;i--){
 //             s+=S[i];
 //         }
