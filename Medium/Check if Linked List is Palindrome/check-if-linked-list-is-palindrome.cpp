@@ -28,25 +28,30 @@ struct Node {
   }
 };
 */
-#include<vector>
-class Solution{
-  public:
-    //Function to check whether the list is palindrome.
-    bool isPalindrome(Node *head)
-    {
-        Node *temp=head;
-        vector<int> v;
-        while(temp!=NULL){
-            v.push_back(temp->data);
-            temp=temp->next;
-        }
+
+// O(n) Space Complexity
+// #include<vector>
+// class Solution{
+//   public:
+//     //Function to check whether the list is palindrome.
+//     bool isPalindrome(Node *head)
+//     {
+//         Node *temp=head;
+//         vector<int> v;
+//         while(temp!=NULL){
+//             v.push_back(temp->data);
+//             temp=temp->next;
+//         }
         
-        for(int i=0;i<v.size()/2;i++){
-            if(v[i]!=v[v.size()-1-i]) return false;
-        }
-        return true;
-    }
-};
+//         for(int i=0;i<v.size()/2;i++){
+//             if(v[i]!=v[v.size()-1-i]) return false;
+//         }
+//         return true;
+//     }
+// };
+
+// O(1) Space Complexity
+
 
 
 
