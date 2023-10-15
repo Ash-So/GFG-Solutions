@@ -59,16 +59,24 @@ int main() {
 bool search(Node* root, int x) {
     
     
-    while(root!=NULL){
-       
-        if(root->data==x) return true;
+ // Recursive
+    if(root==NULL) return false;
     
-        if(root->data>x){
-            root=root->left;
-        }
-        else{
-            root=root->right;
-        }
-    }
-    return false;
+    if(root->data==x) return true;
+    else if(root->data> x) return search(root->left, x);
+    else return search(root->right, x);
+    
+    // Iterative
+    // while(root!=NULL){
+       
+    //     if(root->data==x) return true;
+    
+    //     if(root->data>x){
+    //         root=root->left;
+    //     }
+    //     else{
+    //         root=root->right;
+    //     }
+    // }
+    // return false;
 }
