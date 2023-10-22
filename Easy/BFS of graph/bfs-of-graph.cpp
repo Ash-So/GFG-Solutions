@@ -13,23 +13,13 @@ class Solution {
         //     ans.push_back(a[i]);
         // }
         
-        queue<int> q;
-        // for(int i=0;i<V;i++){
-        //     q.push(i);
-        //     for(int j=0;j<adj[i].size();i++){
-        //        
-        //         q.push(adj[i][j]);
-        //     }
-        // }
-        
-        // while(!q.empty()){
-        //     ans.push_back(q.front());
-        //     q.pop();
-        // }
-        
+        queue<int> q;  
         vector<bool> visited(V, false);
+      
         visited[0]=true;
+      
         q.push(0);
+      
         while(!q.empty()){
             int front= q.front();
             
