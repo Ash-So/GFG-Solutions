@@ -10,16 +10,35 @@ public:
 	// Function returns the second
 	// largest elements
 	int print2largest(int a[], int n) {
-	   int sm=-1,fm=a[0];
-	   for(int i=0;i<n;i++){
-	       if(a[i]>fm) fm=a[i];
-	   }
-	   for(int i=0;i<n;i++){
-	       if(a[i]!=fm && a[i]>sm) sm=a[i];
-	   }
-	   return sm;
+	    
+	   //// O(2n)
+	   //int sm=-1,fm=a[0];
+	   //for(int i=0;i<n;i++){
+	   //    if(a[i]>fm) fm=a[i];
+	   //}
+	   //for(int i=0;i<n;i++){
+	   //    if(a[i]!=fm && a[i]>sm) sm=a[i];
+	   //}
+	   //return sm;
 	   
+	   // O(n)
+	   int slargest=-1, largest=a[0];
+	   
+	   for(int i=0;i<n;i++){
+	       if(a[i]>largest){
+	           slargest=largest;
+	           largest=a[i];
+	       }
+	       else if(a[i]<largest && a[i]> slargest){
+	           slargest=a[i];
+	       }
+	   }
+	   
+	   return slargest;
 	}
+
+    
+    
 };
 
 //{ Driver Code Starts.
