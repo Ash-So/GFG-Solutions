@@ -11,7 +11,7 @@ class Solution{
     // X: element to be searched for
     int search(int arr[], int N, int X)
     {
-        // TC:  SC: 
+        // TC: O(N) SC: O(1)  
         
         for(int i=0;i<N;i++){
             if(arr[i]==X){
