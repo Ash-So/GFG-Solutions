@@ -11,12 +11,12 @@ class Solution{
     //Function to find the sum of contiguous subarray with maximum sum.
     long long maxSubarraySum(int arr[], int n){
         int s=0, start=0, end=0;
-        long long max=INT_MIN, sum=0;
+        long long maxSum=INT_MIN, sum=0;
 
         for(long long i=0;i<n;i++){
             sum+=arr[i];
-            if(max<sum){
-                max=sum;
+            if(maxSum<sum){
+                maxSum=sum;
                 start=s;
                 end=i;
             }
@@ -27,7 +27,7 @@ class Solution{
         }
         
         // cout<<start<<" "<<end; gives the index from where to where
-        return max;
+        return maxSum;
     }
 };
 
